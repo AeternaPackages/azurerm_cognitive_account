@@ -100,19 +100,19 @@ EOT
       bypass         = optional(string)
       default_action = string
       ip_rules       = optional(set(string))
-      virtual_network_rules = optional(object({
+      virtual_network_rules = optional(list(object({
         ignore_missing_vnet_service_endpoint = optional(bool) # Default: false
         subnet_id                            = string
-      }))
+      })))
     }))
     network_injection = optional(object({
       scenario  = string
       subnet_id = string
     }))
-    storage = optional(object({
+    storage = optional(list(object({
       identity_client_id = optional(string)
       storage_account_id = string
-    }))
+    })))
     cognitive_account_customer_managed_keys = optional(map(object({
       key_vault_key_id   = string
       identity_client_id = optional(string)
@@ -138,13 +138,13 @@ EOT
       name             = string
       mode             = optional(string)
       tags             = optional(map(string))
-      content_filter = object({
+      content_filter = list(object({
         block_enabled      = bool
         filter_enabled     = bool
         name               = string
         severity_threshold = string
         source             = string
-      })
+      }))
     })))
     cognitive_deployments = optional(map(object({
       name                       = string
