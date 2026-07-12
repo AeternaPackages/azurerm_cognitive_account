@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.cognitive_accounts : {
       for k2, v2 in coalesce(v1.cognitive_account_customer_managed_keys, {}) :
       "${k1}/${k2}" => merge(v2, {
-        cognitive_account_id = module.cognitive_accounts.cognitive_accounts["${k1}"].id
+        cognitive_account_id = module.cognitive_accounts.cognitive_accounts_id["${k1}"]
       })
     }
   ]...)
@@ -14,7 +14,7 @@ locals {
     for k1, v1 in var.cognitive_accounts : {
       for k2, v2 in coalesce(v1.cognitive_account_projects, {}) :
       "${k1}/${k2}" => merge(v2, {
-        cognitive_account_id = module.cognitive_accounts.cognitive_accounts["${k1}"].id
+        cognitive_account_id = module.cognitive_accounts.cognitive_accounts_id["${k1}"]
       })
     }
   ]...)
@@ -23,7 +23,7 @@ locals {
     for k1, v1 in var.cognitive_accounts : {
       for k2, v2 in coalesce(v1.cognitive_account_rai_blocklists, {}) :
       "${k1}/${k2}" => merge(v2, {
-        cognitive_account_id = module.cognitive_accounts.cognitive_accounts["${k1}"].id
+        cognitive_account_id = module.cognitive_accounts.cognitive_accounts_id["${k1}"]
       })
     }
   ]...)
@@ -32,7 +32,7 @@ locals {
     for k1, v1 in var.cognitive_accounts : {
       for k2, v2 in coalesce(v1.cognitive_account_rai_policies, {}) :
       "${k1}/${k2}" => merge(v2, {
-        cognitive_account_id = module.cognitive_accounts.cognitive_accounts["${k1}"].id
+        cognitive_account_id = module.cognitive_accounts.cognitive_accounts_id["${k1}"]
       })
     }
   ]...)
@@ -41,7 +41,7 @@ locals {
     for k1, v1 in var.cognitive_accounts : {
       for k2, v2 in coalesce(v1.cognitive_deployments, {}) :
       "${k1}/${k2}" => merge(v2, {
-        cognitive_account_id = module.cognitive_accounts.cognitive_accounts["${k1}"].id
+        cognitive_account_id = module.cognitive_accounts.cognitive_accounts_id["${k1}"]
       })
     }
   ]...)
