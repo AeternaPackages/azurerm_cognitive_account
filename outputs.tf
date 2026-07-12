@@ -1,4 +1,9 @@
 # --- azurerm_cognitive_account ---
+output "cognitive_accounts_id" {
+  description = "Map of id values across all cognitive_accounts, keyed the same as var.cognitive_accounts"
+  value       = module.cognitive_accounts.cognitive_accounts_id
+}
+
 output "cognitive_accounts_custom_question_answering_search_service_id" {
   description = "Map of custom_question_answering_search_service_id values across all cognitive_accounts, keyed the same as var.cognitive_accounts"
   value       = module.cognitive_accounts.cognitive_accounts_custom_question_answering_search_service_id
@@ -143,6 +148,11 @@ output "cognitive_accounts_tags" {
 }
 
 # --- azurerm_cognitive_account_customer_managed_key ---
+output "cognitive_account_customer_managed_keys_id" {
+  description = "Map of id values across all cognitive_account_customer_managed_keys, keyed the same as var.cognitive_account_customer_managed_keys"
+  value       = module.cognitive_account_customer_managed_keys.cognitive_account_customer_managed_keys_id
+}
+
 output "cognitive_account_customer_managed_keys_cognitive_account_id" {
   description = "Map of cognitive_account_id values across all cognitive_account_customer_managed_keys, keyed the same as var.cognitive_account_customer_managed_keys"
   value       = module.cognitive_account_customer_managed_keys.cognitive_account_customer_managed_keys_cognitive_account_id
@@ -159,6 +169,11 @@ output "cognitive_account_customer_managed_keys_key_vault_key_id" {
 }
 
 # --- azurerm_cognitive_account_project ---
+output "cognitive_account_projects_id" {
+  description = "Map of id values across all cognitive_account_projects, keyed the same as var.cognitive_account_projects"
+  value       = module.cognitive_account_projects.cognitive_account_projects_id
+}
+
 output "cognitive_account_projects_cognitive_account_id" {
   description = "Map of cognitive_account_id values across all cognitive_account_projects, keyed the same as var.cognitive_account_projects"
   value       = module.cognitive_account_projects.cognitive_account_projects_cognitive_account_id
@@ -205,6 +220,11 @@ output "cognitive_account_projects_tags" {
 }
 
 # --- azurerm_cognitive_account_rai_blocklist ---
+output "cognitive_account_rai_blocklists_id" {
+  description = "Map of id values across all cognitive_account_rai_blocklists, keyed the same as var.cognitive_account_rai_blocklists"
+  value       = module.cognitive_account_rai_blocklists.cognitive_account_rai_blocklists_id
+}
+
 output "cognitive_account_rai_blocklists_cognitive_account_id" {
   description = "Map of cognitive_account_id values across all cognitive_account_rai_blocklists, keyed the same as var.cognitive_account_rai_blocklists"
   value       = module.cognitive_account_rai_blocklists.cognitive_account_rai_blocklists_cognitive_account_id
@@ -226,6 +246,11 @@ output "cognitive_account_rai_blocklists_tags" {
 }
 
 # --- azurerm_cognitive_account_rai_policy ---
+output "cognitive_account_rai_policies_id" {
+  description = "Map of id values across all cognitive_account_rai_policies, keyed the same as var.cognitive_account_rai_policies"
+  value       = module.cognitive_account_rai_policies.cognitive_account_rai_policies_id
+}
+
 output "cognitive_account_rai_policies_base_policy_name" {
   description = "Map of base_policy_name values across all cognitive_account_rai_policies, keyed the same as var.cognitive_account_rai_policies"
   value       = module.cognitive_account_rai_policies.cognitive_account_rai_policies_base_policy_name
@@ -257,6 +282,11 @@ output "cognitive_account_rai_policies_tags" {
 }
 
 # --- azurerm_cognitive_deployment ---
+output "cognitive_deployments_id" {
+  description = "Map of id values across all cognitive_deployments, keyed the same as var.cognitive_deployments"
+  value       = module.cognitive_deployments.cognitive_deployments_id
+}
+
 output "cognitive_deployments_cognitive_account_id" {
   description = "Map of cognitive_account_id values across all cognitive_deployments, keyed the same as var.cognitive_deployments"
   value       = module.cognitive_deployments.cognitive_deployments_cognitive_account_id
